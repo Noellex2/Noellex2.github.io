@@ -1,0 +1,38 @@
+.food-page {
+  padding: 20px 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.food-page h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 6 columns ต่อแถว */
+  gap: 15px; /* ช่องว่างระหว่างการ์ด */
+}
+
+.food-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+.food-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.food-card p {
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 14px;
+}

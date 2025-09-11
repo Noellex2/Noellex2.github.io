@@ -1,0 +1,41 @@
+.body-img {
+  position: relative;
+  width: 90%;           /* กว้างเกือบเต็มจอ */
+  height: 600px;        /* ความสูงของกรอบ */
+  margin: 20px auto;    /* จัดให้อยู่กลางจอแนวนอน */
+  overflow: hidden;
+  background: pink;     /* กรอบสีชมพู */
+  border-radius: 12px;  /* มุมโค้งเล็กน้อย เพิ่มความสวยงาม */
+}
+
+.pink-box {
+  width: 90%;            /* กรอบกว้าง 90% ของหน้าจอ */
+  height: 430px;         /* กำหนดความสูงตามต้องการ */
+  margin: 30px auto;     /* จัดให้อยู่กลางหน้าจอ */
+  background-color: #f3b4b4;/* พื้นหลังสีชมพู */
+  border-radius: 12px;   /* มุมโค้งเล็กน้อย */
+  display: flex;         /* เอาไว้จัดข้อความหรือปุ่มในกรอบ */
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.body-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* ปรับขนาดตามต้องการ */
+  margin: 0 auto;
+}
+
+.body-text {
+  position: absolute;
+  top: 50%; /* วางตรงกลางแนวตั้ง */
+  left: 50%; /* วางตรงกลางแนวนอน */
+  transform: translate(-50%, -50%); /* จัดให้อยู่กึ่งกลางพอดี */
+  color: #000000; 
+  text-align: center;
+  background: rgba(255, 255, 255, 0.849); /* พื้นหลังโปร่งใสให้อ่านง่ายขึ้น */
+  padding: 20px;
+  border-radius: 10px;
+}

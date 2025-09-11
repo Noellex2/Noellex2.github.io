@@ -1,0 +1,43 @@
+.slider {
+  position: relative;
+  width: 90%;          /* กินเกือบเต็มความกว้างจอ */
+  max-width: 800px;    /* ไม่ให้ใหญ่เกิน */
+  height: 450px;       /* กำหนดความสูงเท่ากัน */
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slide-img {
+  width: 100%;          /* เต็มกรอบ */
+  height: 100%;         /* เต็มกรอบ */
+  object-fit: cover;    /* ครอปภาพให้เต็มกรอบโดยไม่บิด */
+  display: block;
+}
+
+
+
+.arrow {
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.arrow:hover {
+  background: rgba(0,0,0,0.8);
+}

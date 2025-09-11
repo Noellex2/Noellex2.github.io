@@ -1,0 +1,30 @@
+.header {
+  background-color: #f3b4b4;
+  padding: 15px 30px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  margin-left: 100px;
+  margin-right: 150px;
+}
+
+.logo:hover {
+  color: #fc8a2e;
+}
+
+.btn {
+    font-size: 24px;
+    margin-left: 50px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.btn:hover {
+  color: #fc8a2e;
+}
