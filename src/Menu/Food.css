@@ -1,7 +1,7 @@
 .food-page {
-  padding: 20px 50px;
-  margin-left: 50px;
-  margin-right: 50px;
+  padding: 20px;
+  margin: 0 auto;         /* ไม่ fix margin ซ้ายขวา */
+  max-width: 1200px;      /* จำกัดความกว้างสูงสุด */
 }
 
 .food-page h2 {
@@ -35,4 +35,23 @@
   margin-top: 8px;
   font-weight: bold;
   font-size: 14px;
+}
+
+
+@media (max-width: 1024px) {
+  .food-grid {
+    grid-template-columns: repeat(3, 1fr); /* tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .food-grid {
+    grid-template-columns: repeat(2, 1fr); /* mobile แนวนอน */
+  }
+}
+
+@media (max-width: 480px) {
+  .food-grid {
+    grid-template-columns: 1fr; /* มือถือเล็กสุด */
+  }
 }

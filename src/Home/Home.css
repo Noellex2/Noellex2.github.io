@@ -5,9 +5,7 @@
 }
 
 .category-section {
-  margin-bottom: 40px;
-  margin-top: 50px;
-  margin-left: 80px;
+  margin: 50px 20px 40px 20px; /* เว้นขอบรอบ ๆ ไม่ fix ด้านซ้าย */
 }
 
 .category-title {
@@ -18,12 +16,13 @@
 
 .menu-container {
   display: flex;
-  justify-content: flex-start;
+  flex-wrap: wrap;          /* ✅ ให้การ์ดขึ้นบรรทัดใหม่เมื่อพื้นที่ไม่พอ */
   gap: 15px;
 }
 
 .menu-card {
-  width: 180px;
+  flex: 1 1 150px;          /* ✅ การ์ดขยาย/ย่อได้ แต่ไม่เล็กกว่า 150px */
+  max-width: 180px;   
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -58,4 +57,22 @@
 
 .category-link:hover  {
   color: #f3b4b4;;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .category-section {
+    margin: 30px 10px;  /* ลด margin เวลามือถือ */
+  }
+
+  .menu-card {
+    flex: 1 1 45%;      /* การ์ดจะแสดง 2 คอลัมน์ */
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-card {
+    flex: 1 1 100%;     /* มือถือเล็กสุด แสดงทีละ 1 การ์ด */
+  }
 }

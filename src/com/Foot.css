@@ -8,7 +8,7 @@
 
 .foot-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
   gap: 25px;
 }
 
@@ -52,4 +52,23 @@
   border-top: 1px solid #444;
   padding-top: 10px;
   font-size: 13px;
+}
+
+@media (max-width: 1024px) {
+  .foot-container {
+    grid-template-columns: repeat(2, 1fr); /* Tablet */
+  }
+}
+
+@media (max-width: 600px) {
+  .foot-container {
+    grid-template-columns: 1fr; /* Mobile */
+    text-align: center; /* จัดกึ่งกลางสวยขึ้น */
+  }
+}
+
+@media (max-width: 600px) {
+  .foot-brand img {
+    width: 40px;
+  }
 }

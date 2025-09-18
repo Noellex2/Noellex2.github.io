@@ -7,6 +7,7 @@ import Drink from './Menu/Drink';
 import Snacks from './Menu/Snacks';
 import Food from './Menu/Food';
 import Foot from './com/Foot';
+import Body from './com/Body';
 
 function App() {
   return (

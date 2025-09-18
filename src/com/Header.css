@@ -1,8 +1,13 @@
 .header {
   background-color: #f3b4b4;
   padding: 15px 30px;
-  text-align: left;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  justify-content: flex-start; /* ✅ ไม่ดันสุดซ้าย-ขวาแล้ว */
+  align-items: center;
+  gap: 40px; /* ✅ ระยะระหว่าง logo กับ nav */
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -10,21 +15,59 @@
   font-weight: bold;
   color: #333;
   text-decoration: none;
-  margin-left: 100px;
-  margin-right: 150px;
+  margin: 0;
 }
 
 .logo:hover {
   color: #fc8a2e;
 }
 
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* ระยะระหว่างปุ่ม */
+}
+
 .btn {
-    font-size: 24px;
-    margin-left: 50px;
-    text-decoration: none;
-    color: #000000;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s;
+  color: #000;
 }
 
 .btn:hover {
   color: #fc8a2e;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center; /* กองกลาง */
+    gap: 10px; /* ลดระยะให้ไม่ห่างเกิน */
+  }
+
+  .nav {
+    flex-direction: column; /* ปุ่มเรียงลง */
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;     /* ยังเป็นแนวนอน */
+    justify-content: space-around; /* กระจายแต่ไม่ชิดกลางเกินไป */
+    text-align: left;
+  }
+
+  .logo {
+    margin-left: 10px; 
+    margin-right: 20px;
+  }
+
+  .nav {
+    flex-direction: row;
+    gap: 10px; /* ลดระยะห่าง */
+    margin-top: 0;
+  }
 }
